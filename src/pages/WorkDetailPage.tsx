@@ -250,44 +250,7 @@ export const WorkDetailPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. GALLERY STILLS */}
-      {work.gallery && work.gallery.length > 0 && (
-        <section className="border-b border-brand-primary/50 text-brand-primary">
-          <div className="grid grid-cols-4 md:grid-cols-12">
-            <div className="col-span-4 md:col-span-10 md:col-start-2 border-x border-brand-primary/50 pt-12 md:pt-20">
-              <div className="p-4 md:p-8 border-b border-brand-primary/50">
-                <p className="mb-2 text-[0.7rem] font-bold tracking-[0.18em] uppercase opacity-75">
-                  selected
-                </p>
-                <h2 className="text-4xl md:text-6xl font-bold tracking-[-0.05em]">
-                  stills &amp; mockups.
-                </h2>
-              </div>
 
-              {/* Gallery Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x border-b border-brand-primary/50">
-                {work.gallery.map((img, idx) => (
-                  <div
-                    key={idx}
-                    className="group relative overflow-hidden aspect-[4/3] border-b border-brand-primary/50"
-                  >
-                    <img
-                      src={img.url}
-                      alt={img.alt || `${work.title} still ${idx + 1}`}
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    />
-                    {img.alt && (
-                      <div className="absolute bottom-2 left-2 bg-brand-cream/90 text-brand-primary px-2.5 py-1 text-[0.65rem] font-mono tracking-wider uppercase border border-brand-primary/40 opacity-0 group-hover:opacity-100 transition-opacity">
-                        {img.alt}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* 5. PREVIOUS / NEXT WORK FOOTER NAVIGATION */}
       <section className="border-b border-brand-primary/50 text-brand-primary">
