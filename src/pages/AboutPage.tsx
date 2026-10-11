@@ -298,8 +298,8 @@ export const AboutPage: React.FC = () => {
                   <div className="relative h-full w-full overflow-hidden">
                     <img
                       alt="Rivisha Marambage"
-                      src="/api/media/file/hero-image-2.webp"
-                      className="absolute inset-0 h-full w-full object-cover"
+                      src="/api/media/file/rivisha-profile.jpg"
+                      className="absolute inset-0 h-full w-full object-cover object-top"
                     />
                   </div>
                 </div>

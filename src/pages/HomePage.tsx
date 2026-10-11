@@ -288,9 +288,9 @@ export const HomePage: React.FC = () => {
                 >
                   <div className="absolute inset-0 transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/side:-translate-x-[2%]">
                     <img
-                      alt="Developer workspace"
-                      src="/api/media/file/hero-image-2.webp"
-                      className="absolute inset-0 h-full w-full object-cover"
+                      alt="Rivisha Marambage"
+                      src="/api/media/file/rivisha-profile.jpg"
+                      className="absolute inset-0 h-full w-full object-cover object-top"
                     />
                   </div>
                 </div>
