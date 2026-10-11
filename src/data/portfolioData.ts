@@ -160,7 +160,7 @@ export const SERVICES: ServiceItem[] = [
       "api integration",
       "website development"
     ],
-    mediaUrl: "/api/media/file/__Laptop%20Scene%2002.mp4",
+    mediaUrl: "/api/media/file/rivisha-hero-video2.mp4",
     mediaType: "video"
   },
   {
@@ -174,7 +174,7 @@ export const SERVICES: ServiceItem[] = [
       "user flows",
       "interface design"
     ],
-    mediaUrl: "/api/media/file/mainscreen-1440x760-1.png",
+    mediaUrl: "/api/media/file/project-steamberry-cover.png",
     mediaType: "image"
   },
   {
@@ -188,7 +188,7 @@ export const SERVICES: ServiceItem[] = [
       "interactive dashboards",
       "rapid prototyping"
     ],
-    mediaUrl: "/api/media/file/__Laptop%20Scene%2002-1.mp4",
+    mediaUrl: "/api/media/file/rivisha-hero-video2.mp4",
     mediaType: "video"
   }
 ];

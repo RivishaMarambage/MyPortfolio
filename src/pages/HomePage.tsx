@@ -40,7 +40,7 @@ export const HomePage: React.FC = () => {
               poster="/api/media/file/project-echoclipz-cover.png"
             >
               <source
-                src="/api/media/file/rivisha-hero-video.mp4"
+                src="/api/media/file/rivisha-hero-video2.mp4"
                 type="video/mp4"
               />
             </video>

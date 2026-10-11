@@ -25,9 +25,9 @@ const NAV_ITEMS: NavItem[] = [
     label: 'about',
     url: '/about',
     media: {
-      url: '/api/media/file/theDeveloper-1.mp4',
+      url: '/api/media/file/rivisha-hero-video2.mp4',
       type: 'video',
-      alt: 'theDeveloper2'
+      alt: 'Rivisha Video Showcase'
     }
   },
   {
@@ -35,9 +35,9 @@ const NAV_ITEMS: NavItem[] = [
     label: 'works',
     url: '/works',
     media: {
-      url: '/api/media/file/__Laptop%20Scene%2002-1.mp4',
+      url: '/api/media/file/rivisha-hero-video2.mp4',
       type: 'video',
-      alt: '__Laptop Scene'
+      alt: 'Rivisha Projects Reel'
     }
   },
   {

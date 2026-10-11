@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
       <div className="relative h-36 overflow-hidden border-b md:h-52 border-brand-cream/40">
         <video
           className="h-full w-full object-cover"
-          src="/api/media/file/shibuya-crossing.mp4"
+          src="/api/media/file/rivisha-hero-video2.mp4"
           muted
           loop
           autoPlay
