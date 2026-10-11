@@ -188,8 +188,8 @@ export const SERVICES: ServiceItem[] = [
       "interactive dashboards",
       "rapid prototyping"
     ],
-    mediaUrl: "/api/media/file/rivisha-hero-video2.mp4",
-    mediaType: "video"
+    mediaUrl: "/api/media/file/service-ai-products.jpg",
+    mediaType: "image"
   }
 ];
 
