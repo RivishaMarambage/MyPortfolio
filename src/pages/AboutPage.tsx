@@ -212,10 +212,24 @@ export const AboutPage: React.FC = () => {
                 Building foundations.
               </h2>
             </div>
-            <figure className="flex min-h-0 flex-1 flex-col justify-center gap-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4 w-full">
-                {/* Informatics Institute of Technology Logo */}
-                <div className="relative aspect-video w-full overflow-hidden border border-brand-primary/50 bg-white p-6 flex items-center justify-center transition-transform hover:scale-[1.02]">
+            <figure className="flex min-h-0 flex-1 flex-col gap-4">
+              {/* Main Hackathon Team Photo */}
+              <div className="relative aspect-[16/10] w-full overflow-hidden border border-brand-primary/50 group">
+                <img
+                  alt="IIT Sri Lanka & University of Westminster Hackathon Team"
+                  className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  src="/api/media/file/iit-hackathon-team.jpg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-white text-[0.6rem] font-mono tracking-wider uppercase px-2 py-1 bg-black/60 backdrop-blur-sm border border-white/10">
+                  <span>Hackathon & Tech Life</span>
+                  <span className="text-brand-accent">IIT · Westminster</span>
+                </div>
+              </div>
+
+              {/* Institution Badges Side-by-Side */}
+              <div className="grid grid-cols-2 gap-3 w-full">
+                <div className="relative h-14 overflow-hidden border border-brand-primary/50 bg-white p-2 flex items-center justify-center">
                   <img
                     alt="Informatics Institute of Technology (IIT)"
                     className="max-h-full max-w-full object-contain"
@@ -223,8 +237,7 @@ export const AboutPage: React.FC = () => {
                   />
                 </div>
 
-                {/* University of Westminster Logo */}
-                <div className="relative aspect-video w-full overflow-hidden border border-brand-primary/50 bg-white p-6 flex items-center justify-center transition-transform hover:scale-[1.02]">
+                <div className="relative h-14 overflow-hidden border border-brand-primary/50 bg-white p-2 flex items-center justify-center">
                   <img
                     alt="University of Westminster"
                     className="max-h-full max-w-full object-contain"
@@ -232,8 +245,9 @@ export const AboutPage: React.FC = () => {
                   />
                 </div>
               </div>
-              <figcaption className="mt-2 text-center opacity-60 text-[0.65rem] tracking-[0.18em] uppercase font-mono">
-                IIT Sri Lanka · University of Westminster, UK
+
+              <figcaption className="text-center opacity-60 text-[0.65rem] tracking-[0.18em] uppercase font-mono">
+                BSc (Hons) Computer Science · 2025–Present
               </figcaption>
             </figure>
           </aside>
