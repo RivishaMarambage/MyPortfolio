@@ -167,8 +167,8 @@ export const WorksPage: React.FC = () => {
               <div className="absolute inset-0">
                 <img
                   alt="Rivisha Marambage"
-                  className="h-full w-full object-cover"
-                  src="/api/media/file/hero-image-1.webp"
+                  className="h-full w-full object-cover object-top"
+                  src="/api/media/file/rivisha-profile.jpg"
                 />
               </div>
             </div>

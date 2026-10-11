@@ -52,8 +52,8 @@ export const HomePage: React.FC = () => {
             <div className="absolute inset-0">
               <img
                 alt="Rivisha Marambage"
-                className="object-cover h-full w-full"
-                src="/api/media/file/hero-image-1.webp"
+                className="object-cover object-top h-full w-full"
+                src="/api/media/file/rivisha-profile.jpg"
               />
             </div>
           </div>
@@ -421,9 +421,9 @@ export const HomePage: React.FC = () => {
                 <div className="col-span-4 md:col-span-6 min-h-[360px] md:min-h-[560px]">
                   <div className="relative h-full w-full overflow-hidden">
                     <img
-                      alt="Rivisha workspace"
-                      src="/api/media/file/hero-image-2.webp"
-                      className="absolute inset-0 h-full w-full object-cover"
+                      alt="Rivisha Marambage"
+                      src="/api/media/file/rivisha-profile.jpg"
+                      className="absolute inset-0 h-full w-full object-cover object-top"
                     />
                   </div>
                 </div>

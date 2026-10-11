@@ -52,8 +52,8 @@ export const AboutPage: React.FC = () => {
               <div className="relative aspect-4/5 w-full overflow-hidden border border-brand-primary/50 md:aspect-auto md:min-h-0 md:flex-1">
                 <img
                   alt="Rivisha Marambage"
-                  className="object-cover h-full w-full"
-                  src="/api/media/file/hero-image-1.webp"
+                  className="object-cover object-top h-full w-full"
+                  src="/api/media/file/rivisha-profile.jpg"
                 />
               </div>
               <figcaption className="mt-3 shrink-0 opacity-50 text-[0.65rem] tracking-[0.18em] uppercase">

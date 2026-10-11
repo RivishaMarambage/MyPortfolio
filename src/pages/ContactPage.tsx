@@ -40,9 +40,9 @@ export const ContactPage: React.FC = () => {
           <div className="relative col-span-4 md:col-span-4 border-l border-brand-primary/50">
             <div className="relative aspect-square max-h-[66svh] w-full overflow-hidden bg-brand-dark">
               <img
-                alt="Rivisha"
-                src="/api/media/file/hero-image-1.webp"
-                className="h-full w-full object-cover"
+                alt="Rivisha Marambage"
+                src="/api/media/file/rivisha-profile.jpg"
+                className="h-full w-full object-cover object-top"
               />
             </div>
           </div>
