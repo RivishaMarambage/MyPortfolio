@@ -37,10 +37,10 @@ export const HomePage: React.FC = () => {
               playsInline
               autoPlay
               preload="auto"
-              poster="/api/media/file/hero-thumbnail_1.1.1_converted.webp"
+              poster="/api/media/file/project-echoclipz-cover.png"
             >
               <source
-                src="/api/media/file/Updated%20Portfolio%20Video%20New.mp4"
+                src="/api/media/file/rivisha-hero-video.mp4"
                 type="video/mp4"
               />
             </video>

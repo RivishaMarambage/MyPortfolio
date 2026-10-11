@@ -23,7 +23,7 @@ export const AboutPage: React.FC = () => {
           <div className="relative col-span-4 md:col-span-4 border-l border-brand-primary/50">
             <div className="relative aspect-square max-h-[66svh] w-full overflow-hidden bg-brand-dark">
               <video
-                src="/api/media/file/theDeveloper-1.mp4"
+                src="/api/media/file/rivisha-hero-video.mp4"
                 muted
                 loop
                 autoPlay
