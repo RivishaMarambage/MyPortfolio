@@ -212,14 +212,29 @@ export const AboutPage: React.FC = () => {
                 Building foundations.
               </h2>
             </div>
-            <figure className="flex min-h-0 flex-1 flex-col">
-              <div className="relative aspect-4/5 w-full overflow-hidden border border-brand-primary/50 md:aspect-auto md:min-h-0 md:flex-1">
-                <img
-                  alt="Campus"
-                  className="object-cover h-full w-full"
-                  src="/api/media/file/project-hearing.jpg"
-                />
+            <figure className="flex min-h-0 flex-1 flex-col justify-center gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4 w-full">
+                {/* Informatics Institute of Technology Logo */}
+                <div className="relative aspect-video w-full overflow-hidden border border-brand-primary/50 bg-white p-6 flex items-center justify-center transition-transform hover:scale-[1.02]">
+                  <img
+                    alt="Informatics Institute of Technology (IIT)"
+                    className="max-h-full max-w-full object-contain"
+                    src="/api/media/file/iit-logo.png"
+                  />
+                </div>
+
+                {/* University of Westminster Logo */}
+                <div className="relative aspect-video w-full overflow-hidden border border-brand-primary/50 bg-white p-6 flex items-center justify-center transition-transform hover:scale-[1.02]">
+                  <img
+                    alt="University of Westminster"
+                    className="max-h-full max-w-full object-contain"
+                    src="/api/media/file/westminster-logo.webp"
+                  />
+                </div>
               </div>
+              <figcaption className="mt-2 text-center opacity-60 text-[0.65rem] tracking-[0.18em] uppercase font-mono">
+                IIT Sri Lanka · University of Westminster, UK
+              </figcaption>
             </figure>
           </aside>
 
