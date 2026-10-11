@@ -394,9 +394,9 @@ export const WorksPage: React.FC = () => {
                 <div className="col-span-4 md:col-span-6 min-h-[360px] md:min-h-[560px]">
                   <div className="relative h-full w-full overflow-hidden">
                     <img
-                      alt="Northline Coffee Roasters"
-                      src="/api/media/file/hero-image-1.webp"
-                      className="absolute inset-0 h-full w-full object-cover"
+                      alt="Coffee Aesthetic"
+                      src="/api/media/file/coffee-aesthetic.jpg"
+                      className="absolute inset-0 h-full w-full object-cover object-center"
                     />
                   </div>
                 </div>
