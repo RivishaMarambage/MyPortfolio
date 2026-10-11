@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-brand-cream: #111318;
+    --color-brand-primary: #F4F3ED;
+    --color-brand-dark: #090a0d;
+    --color-brand-light: #111318;
+    --color-brand-accent: #C4F56A;
+    --color-brand-card: #292C34;
+    color-scheme: dark;
+  }
+
+  [data-theme="dark"] {
+    --color-brand-cream: #111318;
+    --color-brand-primary: #F4F3ED;
+    --color-brand-dark: #090a0d;
+    --color-brand-light: #111318;
+    --color-brand-accent: #C4F56A;
+    --color-brand-card: #292C34;
+    color-scheme: dark;
+  }
+
+  [data-theme="light"] {
+    --color-brand-cream: #F4F3ED;
+    --color-brand-primary: #111318;
+    --color-brand-dark: #090a0d;
+    --color-brand-light: #F4F3ED;
+    --color-brand-accent: #4D7C0F;
+    --color-brand-card: #E5E4DD;
+    color-scheme: light;
+  }
+
+  * {
+    border-color: color-mix(in srgb, var(--color-brand-primary) 30%, transparent);
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--color-brand-cream);
+    color: var(--color-brand-primary);
+    scroll-behavior: smooth;
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-brand-cream);
+    color: var(--color-brand-primary);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-accent);
+    color: #111318;
+  }
+}
+
+/* Custom Design System Utilities */
+.bg-brand-cream {
+  background-color: var(--color-brand-cream);
+}
+.text-brand-cream {
+  color: var(--color-brand-cream);
+}
+.border-brand-cream {
+  border-color: var(--color-brand-cream);
+}
+.border-brand-cream\/40 {
+  border-color: color-mix(in srgb, var(--color-brand-cream) 40%, transparent);
+}
+.border-brand-cream\/50 {
+  border-color: color-mix(in srgb, var(--color-brand-cream) 50%, transparent);
+}
+
+.bg-brand-primary {
+  background-color: var(--color-brand-primary);
+}
+.text-brand-primary {
+  color: var(--color-brand-primary);
+}
+.border-brand-primary {
+  border-color: var(--color-brand-primary);
+}
+.border-brand-primary\/25 {
+  border-color: color-mix(in srgb, var(--color-brand-primary) 25%, transparent);
+}
+.border-brand-primary\/50 {
+  border-color: color-mix(in srgb, var(--color-brand-primary) 50%, transparent);
+}
+.border-brand-primary\/60 {
+  border-color: color-mix(in srgb, var(--color-brand-primary) 60%, transparent);
+}
+
+.bg-brand-dark {
+  background-color: var(--color-brand-dark);
+}
+.text-brand-dark {
+  color: var(--color-brand-dark);
+}
+
+.bg-brand-card {
+  background-color: var(--color-brand-card);
+}
+.border-brand-card {
+  border-color: var(--color-brand-card);
+}
+
+.bg-brand-accent {
+  background-color: var(--color-brand-accent);
+}
+.text-brand-accent {
+  color: var(--color-brand-accent);
+}
+.border-brand-accent {
+  border-color: var(--color-brand-accent);
+}
+
+/* Animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes vinyl {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 26s linear infinite;
+}
+
+.animate-marquee-view-all {
+  display: flex;
+  width: max-content;
+  animation: marquee 55s linear infinite;
+}
+
+.animate-vinyl {
+  animation: vinyl 16s linear infinite;
+}
+
+/* Rolling CTA Hover Effect */
+.group\/roll:hover .group-hover\/roll\:translate-y-full {
+  transform: translateY(100%);
+}
+.group\/roll:hover .group-hover\/roll\:translate-y-0 {
+  transform: translateY(0%);
+}
+.group\/roll:hover .group-hover\/roll\:translate-x-1 {
+  transform: translateX(0.25rem);
+}
+
+.group\/cta:hover .group-hover\/cta\:-translate-y-\[200\%\] {
+  transform: translateY(-200%);
+}
+.group\/cta:hover .group-hover\/cta\:translate-y-0 {
+  transform: translateY(0%);
+}
