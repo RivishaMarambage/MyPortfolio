@@ -52,8 +52,8 @@ export const HomePage: React.FC = () => {
             <div className="absolute inset-0">
               <img
                 alt="Rivisha Marambage"
-                className="object-cover object-top h-full w-full"
-                src="/api/media/file/rivisha-profile.jpg"
+                className="object-cover object-center h-full w-full"
+                src="/api/media/file/rivisha-hero-portrait.jpg"
               />
             </div>
           </div>
