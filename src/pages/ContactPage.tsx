@@ -27,18 +27,18 @@ export const ContactPage: React.FC = () => {
       <section className="border-b border-brand-primary/50 text-brand-primary">
         <div className="grid grid-cols-4 md:grid-cols-12">
           {/* Left Title */}
-          <div className="relative z-10 col-span-4 flex flex-col justify-end px-3 py-8 md:col-span-8 md:px-4 md:py-12">
-            <p className="mb-3 md:mb-4 text-[0.85rem] font-bold tracking-[0.18em] uppercase opacity-75 md:text-base">
+          <div className="relative z-10 col-span-4 flex flex-col justify-end px-4 py-8 sm:px-6 md:col-span-8 md:px-4 md:py-12 border-b md:border-b-0 border-brand-primary/50">
+            <p className="mb-2 sm:mb-3 md:mb-4 text-[0.85rem] font-bold tracking-[0.18em] uppercase opacity-75 md:text-base">
               let's collaborate
             </p>
-            <h1 className="text-[clamp(3.5rem,22vw,17rem)] leading-[0.8] font-bold tracking-[-0.13em]">
+            <h1 className="text-[clamp(3.5rem,20vw,17rem)] leading-[0.8] font-bold tracking-[-0.13em]">
               contact me.
             </h1>
           </div>
 
           {/* Right Image Card */}
-          <div className="relative col-span-4 md:col-span-4 border-l border-brand-primary/50">
-            <div className="relative aspect-square max-h-[66svh] w-full overflow-hidden bg-brand-dark">
+          <div className="relative col-span-4 md:col-span-4 md:border-l border-brand-primary/50">
+            <div className="relative aspect-[4/3] sm:aspect-square md:aspect-square max-h-[50svh] sm:max-h-[66svh] w-full overflow-hidden bg-brand-dark">
               <img
                 alt="Rivisha Marambage"
                 src="/api/media/file/rivisha-profile.jpg"

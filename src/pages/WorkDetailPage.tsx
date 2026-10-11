@@ -69,17 +69,17 @@ export const WorkDetailPage: React.FC = () => {
           <div className="col-span-4 md:col-span-12">
             {/* Action Bar: Direct Live URL button and view controls */}
             {work.liveUrl && (
-              <div className="flex flex-wrap items-center justify-between gap-4 p-4 md:p-6 bg-brand-primary text-brand-cream border-b border-brand-primary/50">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 md:p-6 bg-brand-primary text-brand-cream border-b border-brand-primary/50">
                 <div className="flex items-center gap-3">
-                  <span className="relative flex h-3 w-3">
+                  <span className="relative flex h-3 w-3 shrink-0">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-accent"></span>
                   </span>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col min-w-0">
                     <span className="text-[0.65rem] tracking-[0.18em] uppercase font-bold opacity-80">
                       Live Interactive Project
                     </span>
-                    <span className="font-mono text-xs opacity-90">
+                    <span className="font-mono text-xs opacity-90 truncate max-w-[280px] sm:max-w-none">
                       {work.liveUrl}
                     </span>
                   </div>
@@ -90,7 +90,7 @@ export const WorkDetailPage: React.FC = () => {
                     href={work.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-accent text-[#111318] text-xs font-bold tracking-wider uppercase transition-all duration-200 hover:brightness-110 hover:scale-[1.02] shadow-sm"
+                    className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-4 py-2 sm:px-5 sm:py-2.5 bg-brand-accent text-[#111318] text-xs font-bold tracking-wider uppercase transition-all duration-200 hover:brightness-110 hover:scale-[1.02] shadow-sm"
                   >
                     <span>Visit Live Website</span>
                     <span className="text-sm">↗</span>
@@ -103,28 +103,28 @@ export const WorkDetailPage: React.FC = () => {
             {work.liveUrl ? (
               <div className="flex flex-col border-b border-brand-primary/50 bg-[#15171e]">
                 {/* Simulated Browser Chrome Topbar */}
-                <div className="flex items-center justify-between px-4 py-3 bg-[#1e2129] border-b border-white/10 select-none">
-                  <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-[#ff5f56]/80 inline-block"></span>
-                    <span className="w-3 h-3 rounded-full bg-[#ffbd2e]/80 inline-block"></span>
-                    <span className="w-3 h-3 rounded-full bg-[#27c93f]/80 inline-block"></span>
+                <div className="flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 bg-[#1e2129] border-b border-white/10 select-none gap-2">
+                  <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                    <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#ff5f56]/80 inline-block"></span>
+                    <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#ffbd2e]/80 inline-block"></span>
+                    <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#27c93f]/80 inline-block"></span>
                   </div>
                   
                   {/* Address pill */}
-                  <div className="flex items-center gap-2 bg-[#111318] px-4 py-1.5 rounded-md border border-white/10 text-xs font-mono text-white/70 max-w-md w-full justify-center">
-                    <svg className="w-3 h-3 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center gap-1.5 sm:gap-2 bg-[#111318] px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-md border border-white/10 text-[0.65rem] sm:text-xs font-mono text-white/70 max-w-md w-full justify-center min-w-0">
+                    <svg className="w-3 h-3 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                     <span className="truncate">{work.liveUrl}</span>
                   </div>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 shrink-0">
                     <a
                       href={work.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       title="Open full page in new tab"
-                      className="text-white/60 hover:text-white text-xs font-mono px-2 py-1 border border-white/10 rounded transition-colors"
+                      className="text-white/60 hover:text-white text-[0.65rem] sm:text-xs font-mono px-2 py-1 border border-white/10 rounded transition-colors"
                     >
                       Open ↗
                     </a>
@@ -132,7 +132,7 @@ export const WorkDetailPage: React.FC = () => {
                 </div>
 
                 {/* Embedded scrollable webpage */}
-                <div className="relative w-full h-[70vh] md:h-[82vh] bg-white overflow-hidden">
+                <div className="relative w-full h-[58vh] sm:h-[70vh] md:h-[82vh] bg-white overflow-hidden">
                   <iframe
                     src={work.liveUrl}
                     title={`${work.title} Live Preview`}
@@ -143,7 +143,7 @@ export const WorkDetailPage: React.FC = () => {
                 </div>
                 
                 {/* Note bar beneath preview */}
-                <div className="flex items-center justify-between px-4 py-2 bg-[#1a1d24] text-[0.65rem] font-mono text-white/60 border-t border-white/10">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 px-3 sm:px-4 py-2 bg-[#1a1d24] text-[0.65rem] font-mono text-white/60 border-t border-white/10">
                   <span>Interactive Preview · Scroll, click and explore the live build above</span>
                   <a
                     href={work.liveUrl}

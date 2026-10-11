@@ -65,9 +65,9 @@ export const HeaderMenu: React.FC<HeaderMenuProps> = ({ open, onClose }) => {
         color: 'var(--color-brand-primary)'
       }}
     >
-      <div className="flex-1 grid grid-cols-4 md:grid-cols-12 min-h-0">
+      <div className="flex-1 grid grid-cols-4 md:grid-cols-12 min-h-0 overflow-y-auto md:overflow-hidden">
         {/* Left Links Column */}
-        <div className="col-span-4 md:col-span-7 flex flex-col justify-between border-b md:border-b-0 md:border-r border-brand-primary/50">
+        <div className="col-span-4 md:col-span-7 flex flex-col justify-between border-b md:border-b-0 md:border-r border-brand-primary/50 min-h-0">
           <nav className="flex flex-col flex-1 divide-y divide-brand-primary/50 border-b border-brand-primary/50">
             {NAV_ITEMS.map((item) => (
               <Link
@@ -75,9 +75,9 @@ export const HeaderMenu: React.FC<HeaderMenuProps> = ({ open, onClose }) => {
                 to={item.url}
                 onClick={onClose}
                 onMouseEnter={() => setActiveMedia(item.media)}
-                className="group/item flex flex-1 items-center justify-between p-4 md:px-8 text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em] uppercase transition-colors hover:bg-brand-primary hover:text-brand-cream"
+                className="group/item flex flex-1 items-center justify-between p-4 py-6 md:px-8 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em] uppercase transition-colors hover:bg-brand-primary hover:text-brand-cream"
               >
-                <div className="flex items-center gap-4 md:gap-8">
+                <div className="flex items-center gap-3 sm:gap-6 md:gap-8">
                   <span className="text-xs md:text-sm font-mono opacity-60 tabular-nums">
                     {item.number}
                   </span>
@@ -95,7 +95,7 @@ export const HeaderMenu: React.FC<HeaderMenuProps> = ({ open, onClose }) => {
                 </div>
                 <span
                   aria-hidden="true"
-                  className="text-2xl md:text-4xl transition-transform duration-300 group-hover/item:translate-x-2"
+                  className="text-xl sm:text-3xl md:text-4xl transition-transform duration-300 group-hover/item:translate-x-2"
                 >
                   →
                 </span>
@@ -104,17 +104,17 @@ export const HeaderMenu: React.FC<HeaderMenuProps> = ({ open, onClose }) => {
           </nav>
 
           {/* Bottom Socials in Drawer */}
-          <div className="p-4 md:px-8 py-6 flex flex-wrap items-center justify-between gap-4">
+          <div className="p-4 md:px-8 py-5 flex flex-wrap items-center justify-between gap-4 bg-brand-primary/5">
             <span className="text-[0.65rem] tracking-[0.18em] uppercase opacity-60">
               elsewhere
             </span>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               <RollingLink
                 href={SOCIAL_LINKS.github}
                 target="_blank"
                 rel="noreferrer noopener"
                 showArrow
-                className="text-[0.75rem] tracking-[0.18em]"
+                className="text-[0.7rem] sm:text-[0.75rem] tracking-[0.18em]"
               >
                 GitHub
               </RollingLink>
@@ -123,14 +123,14 @@ export const HeaderMenu: React.FC<HeaderMenuProps> = ({ open, onClose }) => {
                 target="_blank"
                 rel="noreferrer noopener"
                 showArrow
-                className="text-[0.75rem] tracking-[0.18em]"
+                className="text-[0.7rem] sm:text-[0.75rem] tracking-[0.18em]"
               >
                 LinkedIn
               </RollingLink>
               <RollingLink
                 href={`mailto:${SOCIAL_LINKS.email}`}
                 showArrow
-                className="text-[0.75rem] tracking-[0.18em]"
+                className="text-[0.7rem] sm:text-[0.75rem] tracking-[0.18em]"
               >
                 Email
               </RollingLink>

@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
       <nav className="flex border-b border-brand-cream/40">
         <Link
           to="/about"
-          className="group/roll flex flex-1 items-center justify-center border-r last:border-r-0 border-brand-cream/40 p-3 md:p-4 py-10 md:py-14 text-lg md:text-xl leading-[1.3] tracking-[0.06em] uppercase transition-colors hover:bg-brand-cream hover:text-brand-primary"
+          className="group/roll flex flex-1 items-center justify-center border-r last:border-r-0 border-brand-cream/40 p-2 sm:p-3 md:p-4 py-6 sm:py-10 md:py-14 text-sm sm:text-lg md:text-xl leading-[1.3] tracking-[0.06em] uppercase transition-colors hover:bg-brand-cream hover:text-brand-primary"
         >
           <span className="relative block shrink-0 overflow-hidden">
             <span className="block transition-transform duration-[450ms] ease-[cubic-bezier(0.65,0,0.35,1)] group-hover/roll:translate-y-full">
@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
         </Link>
         <Link
           to="/works"
-          className="group/roll flex flex-1 items-center justify-center border-r last:border-r-0 border-brand-cream/40 p-3 md:p-4 py-10 md:py-14 text-lg md:text-xl leading-[1.3] tracking-[0.06em] uppercase transition-colors hover:bg-brand-cream hover:text-brand-primary"
+          className="group/roll flex flex-1 items-center justify-center border-r last:border-r-0 border-brand-cream/40 p-2 sm:p-3 md:p-4 py-6 sm:py-10 md:py-14 text-sm sm:text-lg md:text-xl leading-[1.3] tracking-[0.06em] uppercase transition-colors hover:bg-brand-cream hover:text-brand-primary"
         >
           <span className="relative block shrink-0 overflow-hidden">
             <span className="block transition-transform duration-[450ms] ease-[cubic-bezier(0.65,0,0.35,1)] group-hover/roll:translate-y-full">
@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
         </Link>
         <Link
           to="/contact"
-          className="group/roll flex flex-1 items-center justify-center border-r last:border-r-0 border-brand-cream/40 p-3 md:p-4 py-10 md:py-14 text-lg md:text-xl leading-[1.3] tracking-[0.06em] uppercase transition-colors hover:bg-brand-cream hover:text-brand-primary"
+          className="group/roll flex flex-1 items-center justify-center border-r last:border-r-0 border-brand-cream/40 p-2 sm:p-3 md:p-4 py-6 sm:py-10 md:py-14 text-sm sm:text-lg md:text-xl leading-[1.3] tracking-[0.06em] uppercase transition-colors hover:bg-brand-cream hover:text-brand-primary"
         >
           <span className="relative block shrink-0 overflow-hidden">
             <span className="block transition-transform duration-[450ms] ease-[cubic-bezier(0.65,0,0.35,1)] group-hover/roll:translate-y-full">

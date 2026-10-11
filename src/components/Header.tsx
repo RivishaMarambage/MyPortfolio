@@ -143,22 +143,22 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-30 border-b bg-brand-cream h-14 md:h-16 border-brand-primary/50 grid grid-cols-4 md:grid-cols-12 transition-colors duration-300">
+      <header className="fixed inset-x-0 top-0 z-30 border-b bg-brand-cream h-14 md:h-16 border-brand-primary/50 flex items-stretch justify-between transition-colors duration-300 pr-14 md:pr-16">
         {/* Brand Logo */}
         <Link
           to="/"
-          className="col-span-2 md:col-span-3 flex items-center border-r px-3 text-2xl font-bold tracking-[-0.06em] md:px-4 md:text-3xl border-brand-primary/50 text-brand-primary hover:opacity-80 transition-opacity"
+          className="flex items-center border-r px-3 text-xl font-bold tracking-[-0.06em] sm:text-2xl md:px-4 md:text-3xl border-brand-primary/50 text-brand-primary hover:opacity-80 transition-opacity shrink-0"
           onClick={() => setMenuOpen(false)}
         >
-          <span className="font-heading font-bold text-2xl md:text-3xl tracking-[-0.07em]">
+          <span className="font-heading font-bold text-xl sm:text-2xl md:text-3xl tracking-[-0.07em]">
             rivisha<span className="text-brand-accent">.</span>
           </span>
         </Link>
 
         {/* Desktop World Times Marquee */}
-        <div className="hidden md:col-span-6 md:block border-r border-brand-primary/50">
+        <div className="hidden md:flex flex-1 border-r border-brand-primary/50 overflow-hidden">
           <div
-            className="group relative h-full overflow-hidden"
+            className="group relative h-full w-full overflow-hidden"
             role="status"
             aria-live="off"
           >
@@ -173,13 +173,13 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Theme Toggle Button */}
-        <div className="col-span-2 md:col-span-3 flex items-stretch justify-end">
+        <div className="flex items-stretch justify-end">
           <button
             type="button"
             onClick={toggleTheme}
             aria-pressed={theme === 'dark'}
             aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-            className="group group/roll flex h-full cursor-pointer items-center gap-2.5 px-4 transition-colors hover:bg-brand-primary hover:text-brand-cream disabled:cursor-default mr-14 md:mr-16"
+            className="group group/roll flex h-full cursor-pointer items-center gap-2 px-3 sm:px-4 transition-colors hover:bg-brand-primary hover:text-brand-cream disabled:cursor-default"
           >
             <span className="relative block shrink-0 overflow-hidden leading-[1.4] text-[0.65rem] tracking-[0.18em] uppercase">
               <span className="block transition-transform duration-[450ms] ease-[cubic-bezier(0.65,0,0.35,1)] group-hover/roll:translate-y-full">

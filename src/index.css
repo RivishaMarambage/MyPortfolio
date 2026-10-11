@@ -42,6 +42,9 @@
     color: var(--color-brand-primary);
     scroll-behavior: smooth;
     transition: background-color 300ms ease, color 300ms ease;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -50,6 +53,9 @@
     background-color: var(--color-brand-cream);
     color: var(--color-brand-primary);
     overflow-x: hidden;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {

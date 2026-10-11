@@ -56,15 +56,15 @@ export const WorksPage: React.FC = () => {
       <section className="border-b border-brand-primary/50 text-brand-primary">
         <div className="grid grid-cols-4 md:grid-cols-12">
           {/* Left Title */}
-          <div className="relative z-10 col-span-4 flex flex-col justify-end px-3 py-8 md:col-span-8 md:px-4 md:py-12">
-            <h1 className="text-[clamp(3.5rem,22vw,17rem)] leading-[0.8] font-bold tracking-[-0.13em]">
+          <div className="relative z-10 col-span-4 flex flex-col justify-end px-4 py-8 sm:px-6 md:col-span-8 md:px-4 md:py-12 border-b md:border-b-0 border-brand-primary/50">
+            <h1 className="text-[clamp(3.5rem,20vw,17rem)] leading-[0.8] font-bold tracking-[-0.13em]">
               works.
             </h1>
           </div>
 
           {/* Right Vinyl & Portrait Card */}
-          <div className="relative col-span-4 md:col-span-4 border-l border-brand-primary/50">
-            <div className="relative aspect-square max-h-[66svh] w-full overflow-hidden bg-brand-dark">
+          <div className="relative col-span-4 md:col-span-4 md:border-l border-brand-primary/50">
+            <div className="relative aspect-[4/3] sm:aspect-square md:aspect-square max-h-[50svh] sm:max-h-[66svh] w-full overflow-hidden bg-brand-dark">
               {/* Spinning Vinyl Record SVG */}
               <div
                 className="absolute top-1/2 left-1/2 aspect-square h-[62%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
@@ -209,21 +209,21 @@ export const WorksPage: React.FC = () => {
               </div>
 
               {/* Details Column */}
-              <div className="col-span-4 md:col-span-5 p-3 md:p-4 flex flex-col justify-center gap-5 md:gap-6">
+              <div className="col-span-4 md:col-span-5 p-4 sm:p-6 md:p-4 flex flex-col justify-center gap-4 sm:gap-6">
                 <h3>
                   <Link
                     to={`/works/${featuredWork.slug}`}
-                    className="text-2xl font-semibold tracking-[-0.03em] md:text-4xl transition-colors hover:text-brand-primary/60"
+                    className="text-2xl sm:text-3xl font-semibold tracking-[-0.03em] md:text-4xl transition-colors hover:text-brand-primary/60"
                   >
                     {featuredWork.title}
                   </Link>
                 </h3>
-                <p className="max-w-[46ch] text-lg md:text-xl leading-relaxed">
+                <p className="max-w-[46ch] text-base sm:text-lg md:text-xl leading-relaxed">
                   {featuredWork.summary.slice(0, 180)}...
                 </p>
 
                 {/* Categories & Tags */}
-                <div className="-mx-3 flex flex-wrap gap-x-10 gap-y-4 border-t px-3 md:-mx-4 md:px-4 border-brand-primary/50 pt-5">
+                <div className="-mx-4 sm:-mx-6 md:-mx-4 flex flex-wrap gap-x-8 gap-y-3 border-t px-4 sm:px-6 md:px-4 border-brand-primary/50 pt-4">
                   <ul className="flex flex-col gap-1 text-[0.65rem] tracking-[0.18em] uppercase">
                     {featuredWork.categories.map((c) => (
                       <li key={c}>{c}</li>
@@ -237,13 +237,13 @@ export const WorksPage: React.FC = () => {
                 </div>
 
                 {/* Action buttons */}
-                <div className="-mx-3 flex items-center justify-between border-t px-3 py-4 md:-mx-4 md:px-4 md:py-5 border-brand-primary/50">
+                <div className="-mx-4 sm:-mx-6 md:-mx-4 flex items-center justify-between border-t px-4 sm:px-6 md:px-4 py-4 md:py-5 border-brand-primary/50">
                   {featuredWork.liveUrl ? (
                     <a
                       href={featuredWork.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-brand-accent text-[#111318] text-xs font-bold tracking-wider uppercase transition-transform hover:scale-105"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 bg-brand-accent text-[#111318] text-xs font-bold tracking-wider uppercase transition-transform hover:scale-105"
                     >
                       <span>Visit Live Site ↗</span>
                     </a>
@@ -253,7 +253,7 @@ export const WorksPage: React.FC = () => {
                     to={`/works/${featuredWork.slug}`}
                     showArrow
                     arrowChar=">"
-                    className="text-lg md:text-xl leading-[1.3] tracking-[0.06em] hover:opacity-80 transition-opacity"
+                    className="text-base sm:text-lg md:text-xl leading-[1.3] tracking-[0.06em] hover:opacity-80 transition-opacity"
                   >
                     learn more
                   </RollingLink>
@@ -283,7 +283,7 @@ export const WorksPage: React.FC = () => {
           <div className="col-span-4 md:col-span-10 md:col-start-2 border-x border-brand-primary/50">
             <div className="grid grid-cols-4 md:grid-cols-10">
               {/* Search Bar */}
-              <label className="col-span-4 md:col-span-3 border-r border-brand-primary/50 p-3 md:p-4 flex cursor-text items-center gap-3 transition-colors focus-within:bg-brand-primary focus-within:text-brand-cream border-b md:border-b-0">
+              <label className="col-span-4 md:col-span-3 md:border-r border-brand-primary/50 p-3 md:p-4 flex cursor-text items-center gap-3 transition-colors focus-within:bg-brand-primary focus-within:text-brand-cream border-b md:border-b-0">
                 <Search className="h-4 w-4 shrink-0" />
                 <input
                   type="search"
@@ -296,14 +296,14 @@ export const WorksPage: React.FC = () => {
               </label>
 
               {/* Category Filter Pills */}
-              <div className="col-span-4 md:col-span-7 p-3 md:p-4 flex flex-wrap items-center gap-2">
+              <div className="col-span-4 md:col-span-7 p-3 md:p-4 flex flex-wrap items-center gap-1.5 sm:gap-2">
                 {CATEGORIES.map((cat) => (
                   <button
                     key={cat}
                     type="button"
                     aria-pressed={selectedCategory === cat}
                     onClick={() => setSelectedCategory(cat)}
-                    className={`p-3 md:p-4 py-1.5 text-[0.65rem] tracking-[0.18em] uppercase border border-brand-primary/50 transition-colors cursor-pointer ${
+                    className={`px-3 py-1.5 text-[0.65rem] tracking-[0.18em] uppercase border border-brand-primary/50 transition-colors cursor-pointer ${
                       selectedCategory === cat
                         ? 'bg-brand-primary text-brand-cream'
                         : 'hover:bg-brand-primary hover:text-brand-cream'
@@ -326,7 +326,7 @@ export const WorksPage: React.FC = () => {
                   key={work.slug}
                   to={`/works/${work.slug}`}
                   data-work-title={work.title}
-                  className={`group/item col-span-4 ${work.gridSpan} flex flex-col md:border-r border-b border-brand-primary/50 transition-colors hover:bg-brand-primary/5`}
+                  className={`group/item col-span-4 md:${work.gridSpan} flex flex-col md:border-r border-b border-brand-primary/50 transition-colors hover:bg-brand-primary/5`}
                 >
                   <div
                     className={`relative w-full grow overflow-hidden ${work.aspectRatio}`}
@@ -385,13 +385,13 @@ export const WorksPage: React.FC = () => {
             {/* Split CTA & Image */}
             <div className="relative">
               <div className="grid grid-cols-4 md:grid-cols-10">
-                <div className="col-span-4 md:col-span-4 border-r border-brand-primary/50 p-3 md:p-4 flex flex-col items-start gap-8 py-14 md:py-20">
-                  <p className="max-w-[46ch] text-lg md:text-xl leading-relaxed">
+                <div className="col-span-4 md:col-span-4 md:border-r border-b md:border-b-0 border-brand-primary/50 p-4 sm:p-6 md:p-4 flex flex-col items-start gap-6 md:gap-8 py-10 md:py-20">
+                  <p className="max-w-[46ch] text-base sm:text-lg md:text-xl leading-relaxed">
                     Got a project in mind? I'd love to hear about it.
                   </p>
                   <RollingCTA to="/contact">Contact Me</RollingCTA>
                 </div>
-                <div className="col-span-4 md:col-span-6 min-h-[360px] md:min-h-[560px]">
+                <div className="col-span-4 md:col-span-6 min-h-[260px] sm:min-h-[360px] md:min-h-[560px]">
                   <div className="relative h-full w-full overflow-hidden">
                     <img
                       alt="Coffee Aesthetic"

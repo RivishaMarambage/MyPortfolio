@@ -10,18 +10,18 @@ export const AboutPage: React.FC = () => {
       <section className="border-b border-brand-primary/50 text-brand-primary">
         <div className="grid grid-cols-4 md:grid-cols-12">
           {/* Left Title */}
-          <div className="relative z-10 col-span-4 flex flex-col justify-end px-3 py-8 md:col-span-8 md:px-4 md:py-12">
-            <p className="mb-3 md:mb-4 text-[0.85rem] font-bold tracking-[0.18em] uppercase opacity-75 md:text-base">
+          <div className="relative z-10 col-span-4 flex flex-col justify-end px-4 py-8 sm:px-6 md:col-span-8 md:px-4 md:py-12 border-b md:border-b-0 border-brand-primary/50">
+            <p className="mb-2 sm:mb-3 md:mb-4 text-[0.85rem] font-bold tracking-[0.18em] uppercase opacity-75 md:text-base">
               the
             </p>
-            <h1 className="text-[clamp(3.5rem,22vw,17rem)] leading-[0.8] font-bold tracking-[-0.13em]">
+            <h1 className="text-[clamp(3.5rem,20vw,17rem)] leading-[0.8] font-bold tracking-[-0.13em]">
               developer.
             </h1>
           </div>
 
           {/* Right Video Card */}
-          <div className="relative col-span-4 md:col-span-4 border-l border-brand-primary/50">
-            <div className="relative aspect-square max-h-[66svh] w-full overflow-hidden bg-brand-dark">
+          <div className="relative col-span-4 md:col-span-4 md:border-l border-brand-primary/50">
+            <div className="relative aspect-[4/3] sm:aspect-square md:aspect-square max-h-[50svh] sm:max-h-[66svh] w-full overflow-hidden bg-brand-dark">
               <video
                 src="/api/media/file/rivisha-hero-video2.mp4"
                 muted
@@ -314,16 +314,16 @@ export const AboutPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Split CTA & Image */}
+              {/* Split CTA & Image */}
             <div className="relative">
               <div className="grid grid-cols-4 md:grid-cols-10">
-                <div className="col-span-4 md:col-span-4 border-r border-brand-primary/50 p-3 md:p-4 flex flex-col items-start gap-8 py-14 md:py-20">
-                  <p className="max-w-[46ch] text-lg md:text-xl leading-relaxed">
+                <div className="col-span-4 md:col-span-4 md:border-r border-b md:border-b-0 border-brand-primary/50 p-4 sm:p-6 md:p-4 flex flex-col items-start gap-6 md:gap-8 py-10 md:py-20">
+                  <p className="max-w-[46ch] text-base sm:text-lg md:text-xl leading-relaxed">
                     Looking for a developer and designer to bring your idea to life? Let's talk.
                   </p>
                   <RollingCTA to="/contact">Contact Me</RollingCTA>
                 </div>
-                <div className="col-span-4 md:col-span-6 min-h-[360px] md:min-h-[560px]">
+                <div className="col-span-4 md:col-span-6 min-h-[260px] sm:min-h-[360px] md:min-h-[560px]">
                   <div className="relative h-full w-full overflow-hidden">
                     <img
                       alt="Coffee Aesthetic"

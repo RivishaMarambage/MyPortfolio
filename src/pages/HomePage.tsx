@@ -24,11 +24,11 @@ export const HomePage: React.FC = () => {
       {/* 1. HERO SECTION */}
       <section className="flex flex-col border-b md:min-h-[calc(100svh-4rem)] border-brand-primary/50">
         {/* Top Media Split */}
-        <div className="grid grid-cols-4 md:grid-cols-12 md:min-h-[40svh] md:flex-1 border-b border-brand-primary/50">
+        <div className="grid grid-cols-1 md:grid-cols-12 md:min-h-[40svh] md:flex-1 border-b border-brand-primary/50">
           {/* Hero Video Card (Cols 1-8) */}
           <div
             id="hero-media-card"
-            className="relative col-span-4 md:col-span-8 aspect-[4/3] md:aspect-auto md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-brand-primary/50"
+            className="relative w-full aspect-[16/10] sm:aspect-video md:aspect-auto md:col-span-8 md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-brand-primary/50"
           >
             <video
               className="absolute inset-0 h-full w-full object-cover"
@@ -48,7 +48,7 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* Hero Portrait (Cols 9-12) */}
-          <div className="relative col-span-4 md:col-span-4 aspect-[3/4] md:aspect-auto md:h-full overflow-hidden">
+          <div className="relative w-full aspect-[4/5] sm:aspect-square md:aspect-auto md:col-span-4 md:h-full overflow-hidden">
             <div className="absolute inset-0">
               <img
                 alt="Rivisha Marambage"
@@ -62,10 +62,10 @@ export const HomePage: React.FC = () => {
         {/* Bottom Giant Typography & Roles Split */}
         <div className="grid grid-cols-4 md:grid-cols-12">
           {/* Main Title 'rivisha.' */}
-          <div className="col-span-4 flex items-end px-3 py-3 md:col-span-7 md:px-4 md:py-5">
+          <div className="col-span-4 flex items-end px-3 py-4 sm:py-6 md:col-span-7 md:px-4 md:py-5 border-b md:border-b-0 border-brand-primary/50 overflow-hidden">
             <h1
               id="hero-heading"
-              className="text-[clamp(3.5rem,22vw,17rem)] leading-[0.8] font-bold tracking-[-0.13em] select-none"
+              className="text-[clamp(3.2rem,16vw,17rem)] leading-[0.82] font-bold tracking-[-0.11em] select-none break-all sm:break-normal"
               aria-label="rivisha."
             >
               {'rivisha'.split('').map((char, index) => (
@@ -85,7 +85,7 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* Roles */}
-          <ul className="col-span-3 md:col-span-3 md:border-l border-brand-primary/50 p-3 md:p-4 flex flex-col justify-end gap-1 text-base leading-[1.15] font-medium tracking-[-0.02em] md:text-xl lg:text-2xl">
+          <ul className="col-span-3 md:col-span-3 md:border-l border-brand-primary/50 p-3 md:p-4 flex flex-col justify-end gap-1 text-sm leading-[1.2] font-medium tracking-[-0.02em] sm:text-lg md:text-xl lg:text-2xl border-r md:border-r-0 border-brand-primary/50">
             <li className="animate-in fade-in slide-in-from-bottom-2 duration-500 delay-300">
               Software Developer
             </li>
@@ -98,10 +98,10 @@ export const HomePage: React.FC = () => {
           </ul>
 
           {/* Availability Badge */}
-          <div className="col-span-1 md:col-span-2 md:border-l border-brand-primary/50 p-3 md:p-4 flex items-center justify-center">
-            <div className="flex flex-col items-center gap-2 text-center">
+          <div className="col-span-1 md:col-span-2 md:border-l border-brand-primary/50 p-2 sm:p-3 md:p-4 flex items-center justify-center">
+            <div className="flex flex-col items-center gap-1.5 text-center">
               <span className="h-2 w-2 rounded-full bg-brand-accent animate-pulse" />
-              <span className="text-[0.55rem] md:text-[0.6rem] font-mono tracking-[0.15em] uppercase opacity-70 leading-tight">
+              <span className="text-[0.5rem] sm:text-[0.55rem] md:text-[0.6rem] font-mono tracking-[0.12em] uppercase opacity-70 leading-tight">
                 Available<br />Freelance
               </span>
             </div>
@@ -128,8 +128,8 @@ export const HomePage: React.FC = () => {
             {/* Split Bio & CTA */}
             <div className="relative">
               <div className="grid grid-cols-4 md:grid-cols-10 border-b border-brand-primary/50">
-                <div className="col-span-4 md:col-span-4 border-r border-brand-primary/50 p-3 md:p-4 flex flex-col items-start gap-8 py-14 md:py-20">
-                  <p className="max-w-[46ch] text-lg md:text-xl leading-relaxed">
+                <div className="col-span-4 md:col-span-4 md:border-r border-brand-primary/50 p-4 sm:p-6 md:p-4 flex flex-col items-start gap-6 md:gap-8 py-10 md:py-20">
+                  <p className="max-w-[46ch] text-base sm:text-lg md:text-xl leading-relaxed">
                     I'm Rivisha Marambage — a Computer Science undergraduate at IIT Sri Lanka,
                     affiliated with the University of Westminster, UK. I build modern web
                     applications, design intuitive digital experiences, and explore how AI can
@@ -137,7 +137,7 @@ export const HomePage: React.FC = () => {
                   </p>
                   <RollingCTA to="/about">learn more</RollingCTA>
                 </div>
-                <div className="col-span-4 md:col-span-6 min-h-[220px] md:min-h-[300px]" />
+                <div className="hidden md:block md:col-span-6 min-h-[220px] md:min-h-[300px]" />
               </div>
             </div>
           </div>
@@ -163,9 +163,9 @@ export const HomePage: React.FC = () => {
             {/* Slider Row */}
             <div className="grid grid-cols-4 md:grid-cols-10">
               <div className="relative z-10 col-span-4 md:col-span-10 lg:col-span-6 lg:border-r border-brand-primary/50">
-                <div className="flex border-b border-brand-primary/50">
-                  {/* Left Thumbnails Strip */}
-                  <div className="flex w-24 shrink-0 flex-col border-r md:w-36 lg:w-40 border-brand-primary/50">
+                <div className="flex flex-col sm:flex-row border-b border-brand-primary/50">
+                  {/* Thumbnails Strip: Horizontal on small mobile, vertical on sm+ */}
+                  <div className="flex flex-row sm:flex-col w-full sm:w-28 md:w-36 lg:w-40 shrink-0 border-b sm:border-b-0 sm:border-r border-brand-primary/50 overflow-x-auto sm:overflow-visible">
                     {featuredWorks.map((work, idx) => (
                       <button
                         key={work.slug}
@@ -173,7 +173,7 @@ export const HomePage: React.FC = () => {
                         aria-label={`Show ${work.title}`}
                         aria-current={activeIndex === idx}
                         onClick={() => setActiveIndex(idx)}
-                        className={`relative w-full flex-1 cursor-pointer overflow-hidden border-b last:border-b-0 border-brand-primary/50 transition-opacity min-h-[70px] md:min-h-[90px] ${
+                        className={`relative w-24 sm:w-full h-16 sm:h-auto sm:flex-1 shrink-0 cursor-pointer overflow-hidden border-r sm:border-r-0 sm:border-b last:border-b-0 border-brand-primary/50 transition-opacity min-h-[60px] sm:min-h-[75px] md:min-h-[90px] ${
                           activeIndex === idx
                             ? 'opacity-100 ring-2 ring-brand-primary inset-0'
                             : 'opacity-40 hover:opacity-80'
@@ -192,12 +192,12 @@ export const HomePage: React.FC = () => {
                   <div className="min-w-0 flex-1">
                     <article className="flex h-full flex-col">
                       {/* Top Info Box */}
-                      <div className="bg-brand-primary text-brand-cream p-3 md:p-4 flex flex-col gap-5 py-6 md:py-8 transition-colors">
+                      <div className="bg-brand-primary text-brand-cream p-3 md:p-4 flex flex-col gap-4 py-5 md:py-8 transition-colors">
                         <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-                          <h3 className="text-2xl font-semibold tracking-[-0.03em] md:text-4xl">
+                          <h3 className="text-xl sm:text-2xl font-semibold tracking-[-0.03em] md:text-4xl">
                             {activeWork.title}
                           </h3>
-                          <ul className="text-[0.65rem] tracking-[0.18em] uppercase opacity-70 sm:shrink-0 sm:text-right">
+                          <ul className="text-[0.6rem] sm:text-[0.65rem] tracking-[0.18em] uppercase opacity-70 sm:shrink-0 sm:text-right">
                             {activeWork.categories.map((c) => (
                               <li key={c}>{c}</li>
                             ))}
@@ -205,11 +205,11 @@ export const HomePage: React.FC = () => {
                         </div>
 
                         {/* Tags */}
-                        <ul className="flex flex-wrap gap-2">
+                        <ul className="flex flex-wrap gap-1.5 sm:gap-2">
                           {activeWork.tags.map((t) => (
                             <li
                               key={t}
-                              className="border border-brand-cream/50 px-3 py-1 text-[0.65rem] tracking-[0.18em] uppercase"
+                              className="border border-brand-cream/50 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[0.6rem] sm:text-[0.65rem] tracking-[0.15em] uppercase"
                             >
                               {t}
                             </li>
@@ -223,7 +223,7 @@ export const HomePage: React.FC = () => {
                               href={activeWork.liveUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-brand-accent text-[#111318] text-[0.65rem] font-bold tracking-wider uppercase transition-transform hover:scale-105"
+                              className="inline-flex items-center gap-1 px-3 py-1.5 bg-brand-accent text-[#111318] text-[0.6rem] sm:text-[0.65rem] font-bold tracking-wider uppercase transition-transform hover:scale-105"
                             >
                               <span>Live Site ↗</span>
                             </a>
@@ -234,7 +234,7 @@ export const HomePage: React.FC = () => {
                             to={`/works/${activeWork.slug}`}
                             showArrow
                             arrowChar=">"
-                            className="self-end text-lg md:text-xl leading-[1.3] tracking-[0.06em]"
+                            className="self-end text-base sm:text-lg md:text-xl leading-[1.3] tracking-[0.06em]"
                           >
                             learn more
                           </RollingLink>
@@ -244,7 +244,7 @@ export const HomePage: React.FC = () => {
                       {/* Cover Image Link */}
                       <Link
                         to={`/works/${activeWork.slug}`}
-                        className="relative block w-full flex-1 overflow-hidden min-h-[320px] md:min-h-[420px] lg:min-h-[520px] group"
+                        className="relative block w-full flex-1 overflow-hidden min-h-[240px] sm:min-h-[320px] md:min-h-[420px] lg:min-h-[520px] group"
                       >
                         <img
                           alt={activeWork.title}
@@ -357,20 +357,20 @@ export const HomePage: React.FC = () => {
             </span>
 
             {/* Title */}
-            <h3 className="col-span-3 md:col-span-6 border-l border-brand-primary/50 md:border-r p-3 md:p-4 flex items-center text-2xl font-semibold tracking-[-0.03em] md:text-4xl">
+            <h3 className="col-span-3 md:col-span-6 border-l border-brand-primary/50 md:border-r p-3 md:p-4 flex items-center text-xl sm:text-2xl font-semibold tracking-[-0.03em] md:text-4xl">
               {srv.title}
             </h3>
 
             {/* Tags */}
-            <ul className="col-span-3 col-start-2 md:col-span-2 md:col-start-auto border-l border-brand-primary/50 md:border-r md:border-l-0 p-3 md:p-4 flex flex-col justify-center gap-1 text-[0.65rem] tracking-[0.18em] uppercase">
+            <ul className="col-span-4 md:col-span-2 border-t md:border-t-0 md:border-r border-brand-primary/50 p-3 md:p-4 flex flex-wrap md:flex-col justify-center gap-x-3 gap-y-1 text-[0.6rem] sm:text-[0.65rem] tracking-[0.18em] uppercase opacity-80">
               {srv.tags.map((t) => (
                 <li key={t}>{t}</li>
               ))}
             </ul>
 
             {/* Hover preview container */}
-            <div className="relative col-span-4 h-48 overflow-hidden md:col-span-3 md:h-auto">
-              <div className="absolute inset-0 -translate-y-[3%] scale-110 transition-transform duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0 group-hover:scale-100">
+            <div className="relative col-span-4 h-48 sm:h-56 md:h-auto overflow-hidden border-t md:border-t-0 border-brand-primary/50 md:col-span-3">
+              <div className="absolute inset-0 transition-transform duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:-translate-y-[3%] md:scale-110 md:group-hover:translate-y-0 md:group-hover:scale-100">
                 {srv.mediaType === 'video' ? (
                   <video
                     src={srv.mediaUrl}
