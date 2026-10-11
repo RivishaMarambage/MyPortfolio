@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { RollingLink } from '../components/RollingLink';
 import { RollingCTA } from '../components/RollingCTA';
@@ -8,6 +8,17 @@ export const HomePage: React.FC = () => {
   // Selected works slider index (0 to 4)
   const featuredWorks = WORKS.slice(0, 5);
   const [activeIndex, setActiveIndex] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {
+        // Autoplay policy fallback
+      });
+    }
+  }, []);
 
   const activeWork = featuredWorks[activeIndex] || featuredWorks[0];
 
@@ -28,22 +39,18 @@ export const HomePage: React.FC = () => {
           {/* Hero Video Card (Cols 1-8) */}
           <div
             id="hero-media-card"
-            className="relative w-full aspect-[16/10] sm:aspect-video md:aspect-auto md:col-span-8 md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-brand-primary/50"
+            className="relative w-full aspect-[16/10] sm:aspect-video md:aspect-auto md:col-span-8 md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-brand-primary/50 bg-brand-dark"
           >
             <video
+              ref={videoRef}
               className="absolute inset-0 h-full w-full object-cover"
               muted
               loop
               playsInline
               autoPlay
               preload="auto"
-              poster="/api/media/file/project-echoclipz-cover.png"
-            >
-              <source
-                src="/api/media/file/rivisha-hero-video2.mp4"
-                type="video/mp4"
-              />
-            </video>
+              src="/api/media/file/rivisha-hero-video2.mp4"
+            />
             <div className="pointer-events-none absolute inset-0" />
           </div>
 
