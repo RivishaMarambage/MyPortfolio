@@ -147,14 +147,12 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Brand Logo */}
         <Link
           to="/"
-          className="col-span-2 md:col-span-3 flex items-center border-r px-3 text-2xl font-bold tracking-[-0.06em] md:px-4 md:text-3xl border-brand-primary/50"
+          className="col-span-2 md:col-span-3 flex items-center border-r px-3 text-2xl font-bold tracking-[-0.06em] md:px-4 md:text-3xl border-brand-primary/50 text-brand-primary hover:opacity-80 transition-opacity"
           onClick={() => setMenuOpen(false)}
         >
-          <img
-            src="/api/media/file/rivisha-site-logo-primary.svg"
-            alt="rivisha."
-            className="h-6 w-auto md:h-7"
-          />
+          <span className="font-heading font-bold text-2xl md:text-3xl tracking-[-0.07em]">
+            rivisha<span className="text-brand-accent">.</span>
+          </span>
         </Link>
 
         {/* Desktop World Times Marquee */}
