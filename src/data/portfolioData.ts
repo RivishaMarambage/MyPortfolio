@@ -56,7 +56,7 @@ export const WORKS: WorkItem[] = [
     title: "EchoClipz AI",
     slug: "echoclipz-ai",
     summary: "A creator-platform concept for transforming long-form video content into engaging short-form clips with AI-assisted ideation, automatic caption generation, smart editing suggestions, and audience analytics.\n\nDesigned and prototyped to address the growing creator economy need for efficient content repurposing workflows. The platform concept explores how AI can dramatically reduce the time between raw footage and published content.\n\nBuilt on a modern full-stack architecture with Next.js for the frontend, Supabase for real-time data and authentication, and planned integration with AI APIs for video analysis and clip extraction.",
-    coverImage: "/api/media/file/mainscreen-1440x760-1.png",
+    coverImage: "/api/media/file/project-echoclipz-cover.png",
     video: "/api/media/file/__Laptop%20Scene%2002.mp4",
     liveUrl: "https://echoclipz.vercel.app/",
     categories: ["AI Product", "SaaS"],
@@ -77,16 +77,8 @@ export const WORKS: WorkItem[] = [
     ],
     gallery: [
       {
-        alt: "echoclipz dashboard",
-        url: "/api/media/file/mockup-1600x1131-1.png"
-      },
-      {
-        alt: "echoclipz editor",
-        url: "/api/media/file/mockup2-1600x1131-1.png"
-      },
-      {
-        alt: "echoclipz analytics",
-        url: "/api/media/file/app-ux-mockar-2.png"
+        alt: "echoclipz hero banner",
+        url: "/api/media/file/project-echoclipz-cover.png"
       }
     ],
     aspectRatio: "aspect-video",
@@ -96,7 +88,7 @@ export const WORKS: WorkItem[] = [
     title: "SteamBerry Café",
     slug: "steamberry-cafe",
     summary: "A full-featured café ordering experience built as a collaborative project, featuring product selection with customizable options, a real-time cart system, loyalty program integration, and a smooth checkout flow.\n\nI led the frontend development and UI/UX design work, creating the interactive prototypes and translating them into a working web application. The visual design balances the warmth of an artisan coffee-shop aesthetic with modern digital usability principles.\n\nThis project deepened my understanding of component-based architecture, state management across a complex user flow, and collaborative development workflows.",
-    coverImage: "/api/media/file/coffee1.jpg",
+    coverImage: "/api/media/file/project-steamberry-cover.png",
     liveUrl: "https://www.steamsbury.com/",
     categories: ["E-Commerce", "Web Development"],
     tags: ["E-Commerce", "React", "Figma", "UI/UX"],
@@ -116,20 +108,8 @@ export const WORKS: WorkItem[] = [
     ],
     gallery: [
       {
-        alt: "steamberry menu",
-        url: "/api/media/file/cup-mockup-selection.jpg"
-      },
-      {
-        alt: "steamberry cart",
-        url: "/api/media/file/cup-mockup.jpg"
-      },
-      {
-        alt: "steamberry mockup",
-        url: "/api/media/file/mockup1.jpg"
-      },
-      {
-        alt: "steamberry app",
-        url: "/api/media/file/mockup2.jpg"
+        alt: "steamberry storefront hero",
+        url: "/api/media/file/project-steamberry-cover.png"
       }
     ],
     aspectRatio: "aspect-video",
@@ -139,7 +119,7 @@ export const WORKS: WorkItem[] = [
     title: "OceanGuard-GCW",
     slug: "oceanguard-gcw",
     summary: "An environmental awareness web project centered on ocean conservation and the United Nations Sustainable Development Goal 14 — Life Below Water. The project communicates the importance of protecting marine ecosystems through compelling visual storytelling and interactive data presentation.\n\nDesigned to raise awareness among a broad audience, the site presents research-backed information about ocean threats, conservation initiatives, and actions individuals can take, wrapped in an immersive digital experience.\n\nThis project allowed me to explore the intersection of design advocacy and modern web development, creating something that is both visually impactful and informationally substantive.",
-    coverImage: "/api/media/file/testing.jpg",
+    coverImage: "/api/media/file/project-oceanguard-cover.png",
     liveUrl: "https://ocean-guard-gcw.vercel.app/",
     categories: ["Environmental", "Web Project"],
     tags: ["Environmental", "Web Design", "Awareness", "SDG 14"],
@@ -159,12 +139,8 @@ export const WORKS: WorkItem[] = [
     ],
     gallery: [
       {
-        alt: "oceanguard hero",
-        url: "/api/media/file/testing.jpg"
-      },
-      {
-        alt: "oceanguard conservation",
-        url: "/api/media/file/testing-2.jpg"
+        alt: "oceanguard hero banner",
+        url: "/api/media/file/project-oceanguard-cover.png"
       }
     ],
     aspectRatio: "aspect-video",
