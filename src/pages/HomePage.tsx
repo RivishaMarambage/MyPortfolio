@@ -39,7 +39,7 @@ export const HomePage: React.FC = () => {
           {/* Hero Video Card (Cols 1-8) */}
           <div
             id="hero-media-card"
-            className="relative w-full aspect-[16/10] sm:aspect-video md:aspect-auto md:col-span-8 md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-brand-primary/50 bg-brand-dark"
+            className="relative w-full aspect-video max-h-[26vh] sm:max-h-[35vh] md:max-h-none md:aspect-auto md:col-span-8 md:h-full overflow-hidden border-b md:border-b-0 md:border-r border-brand-primary/50 bg-brand-dark"
           >
             <video
               ref={videoRef}
@@ -55,11 +55,11 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* Hero Portrait (Cols 9-12) */}
-          <div className="relative w-full aspect-[4/5] sm:aspect-square md:aspect-auto md:col-span-4 md:h-full overflow-hidden">
+          <div className="relative w-full aspect-[16/10] sm:aspect-video max-h-[26vh] sm:max-h-[35vh] md:max-h-none md:aspect-auto md:col-span-4 md:h-full overflow-hidden">
             <div className="absolute inset-0">
               <img
                 alt="Rivisha Marambage"
-                className="object-cover object-center h-full w-full"
+                className="object-cover object-[center_35%] h-full w-full"
                 src="/api/media/file/rivisha-hero-portrait.jpg"
               />
             </div>
