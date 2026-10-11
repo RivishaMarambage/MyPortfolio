@@ -53,11 +53,11 @@ export const AboutPage: React.FC = () => {
                 <img
                   alt="Rivisha Marambage"
                   className="object-cover object-top h-full w-full"
-                  src="/api/media/file/rivisha-profile.jpg"
+                  src="/api/media/file/rivisha-blazer-portrait.jpg"
                 />
               </div>
               <figcaption className="mt-3 shrink-0 opacity-50 text-[0.65rem] tracking-[0.18em] uppercase">
-                Rivisha Marambage · Sri Lanka, 2025
+                Rivisha Marambage · Sri Lanka, 2026
               </figcaption>
             </figure>
           </aside>
