@@ -166,9 +166,9 @@ export const WorksPage: React.FC = () => {
               {/* Portrait on top of vinyl */}
               <div className="absolute inset-0">
                 <img
-                  alt="Rivisha Marambage"
-                  className="h-full w-full object-cover object-top"
-                  src="/api/media/file/rivisha-profile.jpg"
+                  alt="Rivisha Marambage and Hackathon Team"
+                  className="h-full w-full object-cover object-center"
+                  src="/api/media/file/works-hackathon-hero.jpg"
                 />
               </div>
             </div>
