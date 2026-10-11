@@ -18,6 +18,7 @@ export interface WorkItem {
   coverImage: string;
   video?: string;
   youtubeUrl?: string;
+  liveUrl?: string;
   categories: string[];
   tags: string[];
   relatedLinks?: RelatedLink[];
@@ -57,13 +58,14 @@ export const WORKS: WorkItem[] = [
     summary: "A creator-platform concept for transforming long-form video content into engaging short-form clips with AI-assisted ideation, automatic caption generation, smart editing suggestions, and audience analytics.\n\nDesigned and prototyped to address the growing creator economy need for efficient content repurposing workflows. The platform concept explores how AI can dramatically reduce the time between raw footage and published content.\n\nBuilt on a modern full-stack architecture with Next.js for the frontend, Supabase for real-time data and authentication, and planned integration with AI APIs for video analysis and clip extraction.",
     coverImage: "/api/media/file/mainscreen-1440x760-1.png",
     video: "/api/media/file/__Laptop%20Scene%2002.mp4",
+    liveUrl: "https://echoclipz.vercel.app/",
     categories: ["AI Product", "SaaS"],
     tags: ["AI Product", "SaaS", "Next.js", "React"],
     relatedLinks: [
       {
-        label: "Live Demo",
-        value: "View Demo",
-        url: "#",
+        label: "Live Website",
+        value: "echoclipz.vercel.app",
+        url: "https://echoclipz.vercel.app/",
         newTab: true
       },
       {
@@ -88,20 +90,21 @@ export const WORKS: WorkItem[] = [
       }
     ],
     aspectRatio: "aspect-video",
-    gridSpan: "md:col-span-9"
+    gridSpan: "md:col-span-6"
   },
   {
     title: "SteamBerry Café",
     slug: "steamberry-cafe",
-    summary: "A full-featured café ordering experience built as a group project, featuring product selection with customizable options, a real-time cart system, loyalty program integration, and a smooth checkout flow.\n\nI led the frontend development and UI/UX design work, creating the Figma prototypes and translating them into a working React application. The visual design balances the warmth of a coffee-shop aesthetic with modern digital usability principles.\n\nThis project deepened my understanding of component-based architecture, state management across a complex user flow, and collaborative development workflows using Git.",
+    summary: "A full-featured café ordering experience built as a collaborative project, featuring product selection with customizable options, a real-time cart system, loyalty program integration, and a smooth checkout flow.\n\nI led the frontend development and UI/UX design work, creating the interactive prototypes and translating them into a working web application. The visual design balances the warmth of an artisan coffee-shop aesthetic with modern digital usability principles.\n\nThis project deepened my understanding of component-based architecture, state management across a complex user flow, and collaborative development workflows.",
     coverImage: "/api/media/file/coffee1.jpg",
-    categories: ["E-Commerce", "Group Project"],
+    liveUrl: "https://www.steamsbury.com/",
+    categories: ["E-Commerce", "Web Development"],
     tags: ["E-Commerce", "React", "Figma", "UI/UX"],
     relatedLinks: [
       {
-        label: "Live Demo",
-        value: "View Demo",
-        url: "#",
+        label: "Live Website",
+        value: "steamsbury.com",
+        url: "https://www.steamsbury.com/",
         newTab: true
       },
       {
@@ -129,60 +132,22 @@ export const WORKS: WorkItem[] = [
         url: "/api/media/file/mockup2.jpg"
       }
     ],
-    aspectRatio: "aspect-square",
-    gridSpan: "md:col-span-3"
-  },
-  {
-    title: "Taprobit AI",
-    slug: "taprobit-ai",
-    summary: "An AI-focused web product concept featuring a bold modern landing page with a strong emphasis on engaging visual presentation and clear communication of AI capabilities.\n\nThe project explores how AI-powered tools can be positioned effectively for a Sri Lankan and regional market, with a design language that balances technical credibility with approachability.\n\nBuilt with Next.js and React, the site uses Vercel AI Gateway for backend AI features, with careful attention to performance and responsive design across all device types.",
-    coverImage: "/api/media/file/mainscreen-1440x760-1.png",
-    video: "/api/media/file/__Laptop%20Scene%2002-1.mp4",
-    categories: ["AI Web Product"],
-    tags: ["AI Web Product", "Next.js", "React", "Landing Page"],
-    relatedLinks: [
-      {
-        label: "Live Demo",
-        value: "View Demo",
-        url: "#",
-        newTab: true
-      },
-      {
-        label: "GitHub",
-        value: "View Source",
-        url: "https://github.com/RivishaMarambage",
-        newTab: true
-      }
-    ],
-    gallery: [
-      {
-        alt: "taprobit hero",
-        url: "/api/media/file/portfolio-snapshot-laptop-1-1.png"
-      },
-      {
-        alt: "taprobit features",
-        url: "/api/media/file/portfolio-snapshot-laptop-1-2.png"
-      },
-      {
-        alt: "taprobit dashboard",
-        url: "/api/media/file/portfolio-snapshot-laptop-2.png"
-      }
-    ],
     aspectRatio: "aspect-video",
-    gridSpan: "md:col-span-6"
+    gridSpan: "md:col-span-4"
   },
   {
     title: "OceanGuard-GCW",
     slug: "oceanguard-gcw",
-    summary: "An environmental awareness web project centered on ocean conservation and the United Nations Sustainable Development Goal 14 — Life Below Water. The project communicates the importance of protecting marine ecosystems through compelling visual storytelling and data presentation.\n\nDesigned to raise awareness among a broad audience, the site presents research-backed information about ocean threats, conservation initiatives, and actions individuals can take, wrapped in an immersive visual experience.\n\nThis project allowed me to explore the intersection of design advocacy and web development, creating something that is both visually impactful and informationally substantive.",
+    summary: "An environmental awareness web project centered on ocean conservation and the United Nations Sustainable Development Goal 14 — Life Below Water. The project communicates the importance of protecting marine ecosystems through compelling visual storytelling and interactive data presentation.\n\nDesigned to raise awareness among a broad audience, the site presents research-backed information about ocean threats, conservation initiatives, and actions individuals can take, wrapped in an immersive digital experience.\n\nThis project allowed me to explore the intersection of design advocacy and modern web development, creating something that is both visually impactful and informationally substantive.",
     coverImage: "/api/media/file/testing.jpg",
+    liveUrl: "https://ocean-guard-gcw.vercel.app/",
     categories: ["Environmental", "Web Project"],
-    tags: ["Environmental", "Web Design", "Awareness", "SDG"],
+    tags: ["Environmental", "Web Design", "Awareness", "SDG 14"],
     relatedLinks: [
       {
-        label: "Live Demo",
-        value: "View Demo",
-        url: "#",
+        label: "Live Website",
+        value: "ocean-guard-gcw.vercel.app",
+        url: "https://ocean-guard-gcw.vercel.app/",
         newTab: true
       },
       {
@@ -203,88 +168,7 @@ export const WORKS: WorkItem[] = [
       }
     ],
     aspectRatio: "aspect-video",
-    gridSpan: "md:col-span-6"
-  },
-  {
-    title: "RHL 2026",
-    slug: "rhl-2026",
-    summary: "A nine-a-side hockey event website concept built to showcase tournament information, team identities, match schedules, and event photography in a visually dynamic presentation.\n\nThe design focuses on building excitement around the event through bold typographic choices, strong team branding, and an engaging visual hierarchy that guides visitors through all the key information they need.\n\nThis project challenged me to think about sports event design — balancing energy and excitement with clarity and navigability for fans, players, and organizers.",
-    coverImage: "/api/media/file/project-group.jpg",
-    categories: ["Sports", "Event Website"],
-    tags: ["Sports", "Event", "Web Design", "Branding"],
-    relatedLinks: [
-      {
-        label: "Live Demo",
-        value: "View Demo",
-        url: "#",
-        newTab: true
-      },
-      {
-        label: "GitHub",
-        value: "View Source",
-        url: "https://github.com/RivishaMarambage",
-        newTab: true
-      }
-    ],
-    gallery: [
-      {
-        alt: "rhl tournament",
-        url: "/api/media/file/project-group.jpg"
-      },
-      {
-        alt: "rhl teams",
-        url: "/api/media/file/project.jpg"
-      },
-      {
-        alt: "rhl event",
-        url: "/api/media/file/project-portrait.jpg"
-      }
-    ],
-    aspectRatio: "aspect-square",
-    gridSpan: "md:col-span-3"
-  },
-  {
-    title: "Personal Portfolio",
-    slug: "personal-portfolio",
-    summary: "This personal platform — the very site you are browsing — is itself a project in my portfolio. It represents my current approach to personal brand design, frontend development, and the challenge of presenting creative and technical work in a compelling digital form.\n\nThe site is built with Vite, React 19, TypeScript, and Tailwind CSS v4, following a 12-column architectural grid system with careful attention to motion design, typography, and the cinematic dark aesthetic that defines the rivisha. brand.\n\nKey features include a 3D perspective intro tunnel, real-time world clock marquee with Sri Lanka time highlighted, rolling hover animations, full-page menu with media preview, and detailed case study pages for each project.",
-    coverImage: "/api/media/file/portfolio-snapshot-laptop-3.png",
-    video: "/api/media/file/Updated%20Portfolio%20Video%20New.mp4",
-    categories: ["Personal Brand", "Web Development"],
-    tags: ["Personal Brand", "Web Development", "React", "TypeScript"],
-    relatedLinks: [
-      {
-        label: "Live Website",
-        value: "You are here",
-        url: "/",
-        newTab: false
-      },
-      {
-        label: "GitHub",
-        value: "View Source",
-        url: "https://github.com/RivishaMarambage",
-        newTab: true
-      }
-    ],
-    gallery: [
-      {
-        alt: "portfolio home",
-        url: "/api/media/file/portfolio-snapshot-laptop-1-1.png"
-      },
-      {
-        alt: "portfolio works",
-        url: "/api/media/file/portfolio-snapshot-laptop-1-2.png"
-      },
-      {
-        alt: "portfolio about",
-        url: "/api/media/file/portfolio-snapshot-laptop-2.png"
-      },
-      {
-        alt: "portfolio contact",
-        url: "/api/media/file/portfolio-snapshot-laptop-3.png"
-      }
-    ],
-    aspectRatio: "aspect-video",
-    gridSpan: "md:col-span-9"
+    gridSpan: "md:col-span-10"
   }
 ];
 

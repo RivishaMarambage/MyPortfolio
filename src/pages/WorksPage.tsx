@@ -236,15 +236,28 @@ export const WorksPage: React.FC = () => {
                   </ul>
                 </div>
 
-                {/* Learn more */}
-                <RollingLink
-                  to={`/works/${featuredWork.slug}`}
-                  showArrow
-                  arrowChar=">"
-                  className="-mx-3 flex items-center justify-between border-t px-3 py-4 md:-mx-4 md:px-4 md:py-5 border-brand-primary/50 text-lg md:text-xl leading-[1.3] tracking-[0.06em] hover:bg-brand-primary/10 transition-colors"
-                >
-                  learn more
-                </RollingLink>
+                {/* Action buttons */}
+                <div className="-mx-3 flex items-center justify-between border-t px-3 py-4 md:-mx-4 md:px-4 md:py-5 border-brand-primary/50">
+                  {featuredWork.liveUrl ? (
+                    <a
+                      href={featuredWork.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-brand-accent text-[#111318] text-xs font-bold tracking-wider uppercase transition-transform hover:scale-105"
+                    >
+                      <span>Visit Live Site ↗</span>
+                    </a>
+                  ) : <span />}
+
+                  <RollingLink
+                    to={`/works/${featuredWork.slug}`}
+                    showArrow
+                    arrowChar=">"
+                    className="text-lg md:text-xl leading-[1.3] tracking-[0.06em] hover:opacity-80 transition-opacity"
+                  >
+                    learn more
+                  </RollingLink>
+                </div>
               </div>
             </div>
           </div>
@@ -324,13 +337,21 @@ export const WorksPage: React.FC = () => {
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover/item:scale-[1.05]"
                     />
                   </div>
-                  <div className="p-3 md:p-4 mt-auto border-t border-brand-primary/50 flex flex-col gap-1">
-                    <h3 className="text-base font-semibold tracking-[-0.02em] md:text-lg">
-                      {work.title}
-                    </h3>
-                    <p className="text-[0.65rem] tracking-[0.18em] uppercase opacity-60">
-                      {work.categories[0] || work.tags[0] || 'Project'}
-                    </p>
+                  <div className="p-3 md:p-4 mt-auto border-t border-brand-primary/50 flex items-center justify-between gap-2">
+                    <div className="flex flex-col gap-1">
+                      <h3 className="text-base font-semibold tracking-[-0.02em] md:text-lg">
+                        {work.title}
+                      </h3>
+                      <p className="text-[0.65rem] tracking-[0.18em] uppercase opacity-60">
+                        {work.categories[0] || work.tags[0] || 'Project'}
+                      </p>
+                    </div>
+
+                    {work.liveUrl && (
+                      <span className="shrink-0 px-2.5 py-1 text-[0.6rem] font-bold tracking-wider uppercase bg-brand-accent/20 text-brand-accent border border-brand-accent/40 rounded">
+                        Live ↗
+                      </span>
+                    )}
                   </div>
                 </Link>
               ))}

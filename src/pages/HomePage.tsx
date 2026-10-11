@@ -216,15 +216,29 @@ export const HomePage: React.FC = () => {
                           ))}
                         </ul>
 
-                        {/* Learn more roll link */}
-                        <RollingLink
-                          to={`/works/${activeWork.slug}`}
-                          showArrow
-                          arrowChar=">"
-                          className="mt-auto self-end text-lg md:text-xl leading-[1.3] tracking-[0.06em]"
-                        >
-                          learn more
-                        </RollingLink>
+                        {/* Links row */}
+                        <div className="mt-auto flex items-center justify-between gap-4 pt-2">
+                          {activeWork.liveUrl ? (
+                            <a
+                              href={activeWork.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-brand-accent text-[#111318] text-[0.65rem] font-bold tracking-wider uppercase transition-transform hover:scale-105"
+                            >
+                              <span>Live Site ↗</span>
+                            </a>
+                          ) : <span />}
+
+                          {/* Learn more roll link */}
+                          <RollingLink
+                            to={`/works/${activeWork.slug}`}
+                            showArrow
+                            arrowChar=">"
+                            className="self-end text-lg md:text-xl leading-[1.3] tracking-[0.06em]"
+                          >
+                            learn more
+                          </RollingLink>
+                        </div>
                       </div>
 
                       {/* Cover Image Link */}
